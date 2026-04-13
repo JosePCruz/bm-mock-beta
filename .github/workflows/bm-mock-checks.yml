@@ -1,0 +1,13 @@
+name: mock beta (pass)
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [mock/bm-e2e]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Passing check
+        run: echo "bm-mock-beta OK"
